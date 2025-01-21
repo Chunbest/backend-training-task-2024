@@ -92,20 +92,7 @@ console.log(`贈品還剩下${giftNum}個`);
 let coachIncome = 240000; // 小明全年業績
 let baseBonus = 6000; // 基本獎金
 let coachBonus = baseBonus; // 教練業績獎金帳單，並已加入條件一基本獎金
-// coachIncome = 0
-// coachBonus
-
-// coachIncome < 100,000
-// coachIncome * 0.1 + baseBonus
-
-// coachIncome >= 100,000 && coachIncome < 300,000
-// coachIncome * 0.15 + baseBonus
-
-// coachIncome >= 300,000
-// coachIncome * 0.2 + baseBonus
-
 // 練習：計算教練業績獎金
-let 
 if(coachIncome < 100000){
   console.log(coachBonus = coachIncome * 0.1 + baseBonus);  
 }else if(coachIncome >= 100000 || coachIncome < 300000){

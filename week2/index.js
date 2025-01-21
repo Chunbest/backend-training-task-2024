@@ -4,36 +4,56 @@
 let a = 9;
 let b = 13;
 console.log(a > 0);
+//true
 console.log(b > a);
+//true
 console.log(a + b > 1);
+//true
+
 let c = 51;
 let d = 163;
 console.log(c == d);
+//false
 console.log(c !== d);
+//true
+
 let e = 28;
 let f = 45;
-console.log(f >= e);
-console.log(f != e);
-console.log(f == e);
+console.log(f >= e); 
+//true
+console.log(f != e); 
+//true
+console.log(f == e); 
+//false
+
 
 // ### 題目二：比較運算子 + 強制轉型
 // 請回答每個 console.log 的值為？
 let g = 8;
 let h = '8';
 console.log(g * h == 88);
+//false
 console.log(g * h == 64);
+//true
 console.log(g * h === 64);
+//true
 
 let i = '9';
 let j = '9';
 console.log(i + j == 99);
+//true
 console.log(i + j === '99');
+//true
 console.log(i + j === 99);
+//false
 
 var k = 3;
 var l = '8';
 // 請文字解釋為什麼
 console.log(k * l > 21);
+// 數字3 *字串8，字串8會自動轉型為數字8
+// 輸出 (3*8 > 21)
+// 答案true
 
 // ### 題目三：邏輯運算子 + if, else
 // 情境：健身房週年慶，買課程送贈品
@@ -49,13 +69,15 @@ let BobPrice = 1800; /* Bob 消費金額 */
 let BobIsVip = false; /* Bob 是否為 VIP */
 
 // 練習：（可自行將下方程式碼的註解刪除，完成答題）
-// if () {
-//   console.Log（"客戶您好，您有符合贈品資格"）；
-// } else {
-//   console.Log（"客戶您好，您沒有符合贈品資格"）
-// }
-
+if (BobPrice > giftPriceRule || BobIsVip) {
+  giftNum-=1;
+  console.log("Bob客戶您好，您有符合贈品資格");
+} else {
+  console.log("Bob客戶您好，您沒有符合贈品資格");
+}
+//Bob客戶您好，您有符合贈品資格
 console.log(`贈品還剩下${giftNum}個`);
+//贈品還剩下279個
 
 // ### 題目四：
 // 健身房的業績獎金計算
@@ -70,10 +92,32 @@ console.log(`贈品還剩下${giftNum}個`);
 let coachIncome = 240000; // 小明全年業績
 let baseBonus = 6000; // 基本獎金
 let coachBonus = baseBonus; // 教練業績獎金帳單，並已加入條件一基本獎金
+// coachIncome = 0
+// coachBonus
+
+// coachIncome < 100,000
+// coachIncome * 0.1 + baseBonus
+
+// coachIncome >= 100,000 && coachIncome < 300,000
+// coachIncome * 0.15 + baseBonus
+
+// coachIncome >= 300,000
+// coachIncome * 0.2 + baseBonus
 
 // 練習：計算教練業績獎金
-
+let 
+if(coachIncome < 100000){
+  console.log(coachBonus = coachIncome * 0.1 + baseBonus);  
+}else if(coachIncome >= 100000 || coachIncome < 300000){
+  console.log(coachBonus = coachIncome * 0.15 + baseBonus);  
+}else if(coachIncome >= 300000){
+  console.log(coachBonus = coachIncome * 0.2 + baseBonus);  
+}else{
+   console.log(coachBonus); 
+}
+//42000
 console.log(`小明總共需支付 $${coachBonus} 獎金`);
+//小明總共需支付 $42000 獎金
 
 // ### 題目五：剪刀石頭布
 // 請寫程式來判斷剪刀石頭布的輸贏

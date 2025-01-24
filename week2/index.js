@@ -116,28 +116,37 @@ let playerB = '剪刀';
 if (playerA === '剪刀' && playerB === '剪刀') {
   console.log('平手');
 }
-// 練習：使用 if, else if, else 判斷輸贏
+// 練習：使用 if 包 if判斷輸贏
 
-if (playerA === '剪刀' && playerB === '剪刀') {
-  console.log('平手');
-}else if(playerA === '剪刀' && playerB === '石頭'){
-  console.log('playerB 獲勝');
-}else if(playerA === '剪刀' && playerB === '布'){
-  console.log('playerA 獲勝');
-}else if(playerA === '石頭' && playerB === '石頭'){
-  console.log('playerA 平手');
-}else if(playerA === '石頭' && playerB === '剪刀'){
-  console.log('playerA 獲勝');
-}else if(playerA === '石頭' && playerB === '布'){
-  console.log('playerB 獲勝');
-}else if (playerA === '布' && playerB === '剪刀'){
-  console.log('playerB 獲勝');
-}else if (playerA === '布' && playerB === '石頭'){
-  console.log('playerA 獲勝');
-}else if (playerA === '布' && playerB === '布'){
-  console.log('平手');
+let playerA = '';
+let playerB = '';
+
+playerA = '剪刀';
+playerB = '剪刀';
+
+if(playerA === '剪刀' && playerB === '剪刀'){
+console.log("平手");
 }else{
-  console.log('請重新出拳');
+if(playerA === '石頭' && playerB === '剪刀' || playerA === '布' && playerB === '石頭' || playerA === '剪刀' && playerB === '布'){
+console.log("playerA Win!");
+}else{
+console.log("playerB Win!");
+}
+}
+
+//練習：使用 else if, else 判斷輸贏
+let playerA = '';
+let playerB = '';
+
+playerA = '剪刀';
+playerB = '剪刀';
+
+if (playerA === playerB) {
+  console.log('平手');
+}else if(playerA === '剪刀' && playerB === '石頭' || playerA === '石頭' && playerB === '布' || playerA === '布' && playerB === '剪刀'){
+  console.log('playerB 獲勝');
+}else if(playerA === '剪刀' && playerB === '布' || playerA === '石頭' && playerB === '剪刀' || playerA === '布' && playerB === '石頭'){
+  console.log('playerA 獲勝');
 }
 
 // ### 題目六：陣列、物件變數定義

@@ -147,7 +147,10 @@ if (playerA === playerB) {
   console.log('playerA 獲勝');
 }else if(playerA === '布' && playerB === '剪刀' || playerA === '石頭' && playerB === '布' || playerA === '剪刀' && playerB === '石頭'){
   console.log('playerB 獲勝');
+}else{
+console.log(“請重新出拳!”);
 }
+
 
 
 // ### 題目六：陣列、物件變數定義

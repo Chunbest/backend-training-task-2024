@@ -143,11 +143,12 @@ playerB = '剪刀';
 
 if (playerA === playerB) {
   console.log('平手');
-}else if(playerA === '剪刀' && playerB === '石頭' || playerA === '石頭' && playerB === '布' || playerA === '布' && playerB === '剪刀'){
-  console.log('playerB 獲勝');
-}else if(playerA === '剪刀' && playerB === '布' || playerA === '石頭' && playerB === '剪刀' || playerA === '布' && playerB === '石頭'){
+} else if(playerA === '石頭' && playerB === '剪刀' || playerA === '剪刀' && playerB === '布' || playerA === '布' && playerB === '石頭'){
   console.log('playerA 獲勝');
+}else if(playerA === '布' && playerB === '剪刀' || playerA === '石頭' && playerB === '布' || playerA === '剪刀' && playerB === '石頭'){
+  console.log('playerB 獲勝');
 }
+
 
 // ### 題目六：陣列、物件變數定義
 // 這是一間位於高雄市的健身房，名為「高雄市健身教練聯盟」，專注於提供高品質的健身指導服務。健身房內有多位專業教練，以下是兩位教練的詳細介紹：

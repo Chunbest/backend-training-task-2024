@@ -124,7 +124,7 @@ let playerB = '';
 playerA = '剪刀';
 playerB = '剪刀';
 
-if(playerA === '剪刀' && playerB === '剪刀'){
+if(playerA === playerB){
 console.log("平手");
 }else{
 if(playerA === '石頭' && playerB === '剪刀' || playerA === '布' && playerB === '石頭' || playerA === '剪刀' && playerB === '布'){

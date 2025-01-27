@@ -113,7 +113,7 @@ console.log(`小明總共需支付 $${coachBonus} 獎金`);
 
 let playerA = '剪刀';
 let playerB = '剪刀';
-if (playerA === '剪刀' && playerB === '剪刀') {
+if (playerA === playerB) {
   console.log('平手');
 }
 // 練習：使用 if 包 if判斷輸贏

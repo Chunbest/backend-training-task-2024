@@ -32,6 +32,7 @@ if (courses <= 10) {
 //步驟5.計算總金額
 //步驟6.將資料push紀錄在陣列
 //步驟7.加入輸入預防驗證條件
+//步驟8. 計算總金額, 加入到purchaseRecords 陣列後印出
 
 let purchaseRecords = [
 
@@ -113,13 +114,25 @@ function calculateTotalPrice() {
 新增函式 filterNoPurchaseMember，篩選特定條件的會員記錄。例如：未購買過課程的會員，並依序列出*/
 
 //印出 console.log 文字為 未購買課程的會員有：.......
-let BuyCourseList = [];
+
+
+//取出陣列的name的值
+//const members = ["Alice", "Bob", "Charlie", "Diana", "Evan", "Fiona", "George", "Hannah"];
+
 function filterNoPurchaseMember() {
-
-	members.filter(function (item) {
-		return item.includes("Alice" && "Bob");
+	let haspurchasedMember = [];
+	purchaseRecords.forEach(function (item) {
+		haspurchasedMember.push(item.name);
 	})
+	console.log(`目前購買課程的會員有 ${haspurchasedMember} `); //['Alice', 'Bob', 'Charlie', 'Hannah']
 
+
+	let NoPurchaseMember = members.filter(
+		function (member) {
+			return haspurchasedMember.includes(member) === false; //['Diana', 'Evan', 'Fiona', 'George']
+		}
+	);
+	console.log(`未購買課程的會員有：${NoPurchaseMember}`);
 }
 
 
